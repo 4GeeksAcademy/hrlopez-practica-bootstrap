@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <!-- Este es el encabezado -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i> <b>Instagram</b></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="d-flex">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-">
+                                <li class="nav-item me-2">
+                                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        Create a new post
+                                    </button>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary p-0 ps-2"> <i
+                                                class="fa-solid fa-gear"></i></button>
+                                        <button type="button"
+                                            class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="visually-hidden">Toggle Dropdown</span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Este es el modal para el botón -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Caption:</p>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here"
+                            id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea" class="pt-0">Add the caption of your post here</label>
+                        <div class="row">
+                            <div
+                                class="col-1 border border-secondary-subtle rounded d-flex justify-content-center p-2 m-1 ms-3 mt-2 bg-body-tertiary">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                            <div
+                                class="col-1 border border-secondary-subtle rounded d-flex justify-content-center p-2 m-1 mt-2 bg-body-tertiary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Este es la parte de los botones de las imágenes -->
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-9">
+                <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                            type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                            <i class="fa-solid fa-table-cells"></i></button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                    </li>
+                </ul>
+
+
+                <div class="tab-content" id="pills-tabContent">
+                    <!-- Primera grid -->
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://misadorablescachorros.com/wp-content/uploads/2025/05/criador-golden-retriever.jpg"
+                                        alt="cachorro Golden">
+                                </div>
+
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://media.istockphoto.com/id/1224500457/es/foto/formaci%C3%B3n-en-tecnolog%C3%ADa-abstracta-de-c%C3%B3digo-de-programaci%C3%B3n-del-desarrollador-de-software-y.jpg?s=612x612&w=0&k=20&c=gXN8oxhJPcMuwLYKcpgnIqfBhIBAz2xRuv72DVSMX70="
+                                        alt="programador" />
+                                </div>
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://www.hola.com/horizon/square/7589be8ef584-torre-eiffel-panoramica-paris-t.jpg?im=Resize=(960),type=downsize"
+                                        alt="Torre Eiffel" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://emvvz8q7fgo.exactdn.com/wp-content/uploads/piramides-de-egipto.jpg?strip=all&lossy=1&resize=500%2C375&ssl=1"
+                                        alt="pirámides de Egipto">
+                                </div>
+
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://billiken.lat/wp-content/uploads/2023/08/image-7.png" alt="Leon" />
+                                </div>
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://static8.depositphotos.com/1529496/988/i/450/depositphotos_9883684-stock-photo-erawan-waterfall-kanchanaburi-thailand.jpg"
+                                        alt="Paisaje" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://www.seguritecnia.es/wp-content/uploads/2022/03/inteligencia-artificial-1200x800.jpg"
+                                        alt="inteligencia artificial">
+                                </div>
+
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://www.hola.com/horizon/original_aspect_ratio/2baa4e67f13e-cristiano-z.jpg?im=Resize=(960),type=downsize"
+                                        alt="Messi y Ronaldo" />
+                                </div>
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://thumbs.dreamstime.com/b/majestic-red-dragon-vibrant-scaled-skin-glowing-blue-eyes-large-wings-majestic-red-dragon-vibrant-scaled-skin-377721496.jpg?w=768"
+                                        alt="Dragon" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://spanish.xinhuanet.com/photo/2016-12/16/135908143_14817895356911n.jpg"
+                                        alt="tigre cachorro">
+                                </div>
+
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://cdn.pixabay.com/photo/2018/09/05/04/45/landscape-3655480_1280.jpg"
+                                        alt="paisaje montañoso" />
+                                </div>
+                                <div class="col-4 p-1">
+                                    <img class="imagenes"
+                                        src="https://atomchat.io/wp-content/uploads/2023/08/asistente-virtual-inteligencia-artificial-2048x2048.jpg"
+                                        alt="Robot" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda grid -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class="container">
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Cachorro Golden</h4>
+                                <p class="p-2 m-0 fs-6"> 08/26</p>
+                            </div>
+                            <img src="https://misadorablescachorros.com/wp-content/uploads/2025/05/criador-golden-retriever.jpg"
+                                class="card-img-top" alt="cachorro Golden">
+                            <div class="card-body">
+                                <p class="card-text"> <b>204 likes</b><br>
+                                    Los Golden Retrievers son perros conocidos por su inteligencia,
+                                    amabilidad y energía.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Desarrollador Developer</h4>
+                                <p class="p-2 m-0 fs-6"> 04/09</p>
+                            </div>
+                            <img src="https://media.istockphoto.com/id/1224500457/es/foto/formaci%C3%B3n-en-tecnolog%C3%ADa-abstracta-de-c%C3%B3digo-de-programaci%C3%B3n-del-desarrollador-de-software-y.jpg?s=612x612&w=0&k=20&c=gXN8oxhJPcMuwLYKcpgnIqfBhIBAz2xRuv72DVSMX70="
+                                class="card-img-top" alt="programador">
+                            <div class="card-body">
+                                <p class="card-text"> <b>8744 likes</b><br>
+                                    Los programadores tienen ciertas curiosidades que los distinguen.
+                                    Su amor por los stickers y peluches tecnológicos, su
+                                    sentido del humor único, y su habilidad para encontrar soluciones a problemas
+                                    complejos. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Torre Eiffel</h4>
+                                <p class="p-2 m-0 fs-6"> 01/25</p>
+                            </div>
+                            <img src="https://www.hola.com/horizon/square/7589be8ef584-torre-eiffel-panoramica-paris-t.jpg?im=Resize=(960),type=downsize"
+                                class="card-img-top" alt="Torre Eiffel">
+                            <div class="card-body">
+                                <p class="card-text"> <b>410570 likes</b><br>
+                                    La Torre Eiffel, icono de París y símbolo de Francia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Pirámides de Egipto</h4>
+                                <p class="p-2 m-0 fs-6"> 07/15</p>
+                            </div>
+                            <img src="https://emvvz8q7fgo.exactdn.com/wp-content/uploads/piramides-de-egipto.jpg?strip=all&lossy=1&resize=500%2C375&ssl=1"
+                                class="card-img-top" alt="Pirámides de Egipto">
+                            <div class="card-body">
+                                <p class="card-text"> <b>3504 likes</b><br>
+                                    Las tres pirámides principales de Giza están alineadas casi perfectamente con el
+                                    cinturón de Orión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">León</h4>
+                                <p class="p-2 m-0 fs-6"> 02/19</p>
+                            </div>
+                            <img src="https://billiken.lat/wp-content/uploads/2023/08/image-7.png" class="card-img-top"
+                                alt="León">
+                            <div class="card-body">
+                                <p class="card-text"> <b>9840 likes</b><br>
+                                    Son los únicos felinos sociales que viven en manadas y se comunican a través de
+                                    rugidos poderosos que pueden escucharse a kilómetros de distancia </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Kanchanaburi Thailandia</h4>
+                                <p class="p-2 m-0 fs-6"> 12/31</p>
+                            </div>
+                            <img src="https://static8.depositphotos.com/1529496/988/i/450/depositphotos_9883684-stock-photo-erawan-waterfall-kanchanaburi-thailand.jpg"
+                                class="card-img-top" alt="Paisaje">
+                            <div class="card-body">
+                                <p class="card-text"> <b>40503 likes</b><br>
+                                    Es conocida por su rica historia, hermosos paisajes naturales y la famosa
+                                    construcción del "Puente sobre el río Kwai" y el "Ferrocarril de la Muerte".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Inteligencia artificial</h4>
+                                <p class="p-2 m-0 fs-6"> 03/21</p>
+                            </div>
+                            <img src="https://www.seguritecnia.es/wp-content/uploads/2022/03/inteligencia-artificial-1200x800.jpg"
+                                class="card-img-top" alt="Inteligencia artificial">
+                            <div class="card-body">
+                                <p class="card-text"> <b>5476 likes</b><br>
+                                    La IA es omnipresente hoy en día. Está en tu bolsillo, en tu coche y en tu carrito
+                                    de la compra.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Messi y Ronaldo</h4>
+                                <p class="p-2 m-0 fs-6"> 04/09</p>
+                            </div>
+                            <img src="https://www.hola.com/horizon/original_aspect_ratio/2baa4e67f13e-cristiano-z.jpg?im=Resize=(960),type=downsize"
+                                class="card-img-top" alt="Messi y Ronaldo">
+                            <div class="card-body">
+                                <p class="card-text"> <b>8744 likes</b><br>
+                                    son dos de los futbolistas más grandes de todos los tiempos, y su rivalidad ha
+                                    dominado el deporte durante más de una década.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Dragón</h4>
+                                <p class="p-2 m-0 fs-6"> 05/10</p>
+                            </div>
+                            <img src="https://thumbs.dreamstime.com/b/majestic-red-dragon-vibrant-scaled-skin-glowing-blue-eyes-large-wings-majestic-red-dragon-vibrant-scaled-skin-377721496.jpg?w=768"
+                                class="card-img-top" alt="Dragón ">
+                            <div class="card-body">
+                                <p class="card-text"> <b>9784 likes</b><br>
+                                    Se representan como símbolos de poder y sabiduría.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Tigre</h4>
+                                <p class="p-2 m-0 fs-6"> 10/28</p>
+                            </div>
+                            <img src="https://spanish.xinhuanet.com/photo/2016-12/16/135908143_14817895356911n.jpg"
+                                class="card-img-top" alt="Tigre">
+                            <div class="card-body">
+                                <p class="card-text"> <b>6510 likes</b><br>
+                                    A diferencia de otros felinos, los tigres disfrutan del agua y son nadadores muy
+                                    hábiles.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Rumania</h4>
+                                <p class="p-2 m-0 fs-6"> 06/14</p>
+                            </div>
+                            <img src="https://cdn.pixabay.com/photo/2018/09/05/04/45/landscape-3655480_1280.jpg"
+                                class="card-img-top" alt="Rumania">
+                            <div class="card-body">
+                                <p class="card-text"> <b>5471 likes</b><br>
+                                    Rumania, un país con rica historia y paisajes diversos, ofrece muchas curiosidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                    <div class="col-4 mb-4">
+                        <div class="card" style="width: 28rem;">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="p-2 m-0">Robots</h4>
+                                <p class="p-2 m-0 fs-6"> 11/23</p>
+                            </div>
+                            <img src="https://atomchat.io/wp-content/uploads/2023/08/asistente-virtual-inteligencia-artificial-2048x2048.jpg"
+                                class="card-img-top" alt="Robot">
+                            <div class="card-body">
+                                <p class="card-text"> <b>8754 likes</b><br>
+                                    El término "robot" proviene de la palabra checa "robota", que significa "trabajo
+                                    forzado".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
